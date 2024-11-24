@@ -1,15 +1,19 @@
 "use client";
-import Modal from "@/components/ui/modal";
+
+// Packages
 import { ChevronsRight, Lock } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+
+// Local imports
+import Modal from "@/components/ui/modal";
 import CaseStudyForm from "./_components/form";
 
 const texts = [
-  "FREE Case Study Reveals:",
-  'Why you need a niche and a "proof of concept"',
-  "The secret weapon of all 7-figure coaches and consultants",
-  "The simple two-step system to get high value clients",
+  "FREE Guide Reveals:",
+  "Why every business needs an EIN and how to get it",
+  "The key benefits of having an EIN for your business growth",
+  "Our simple, hassle-free process to secure your EIN quickly",
 ];
 
 const Page = () => {
@@ -48,7 +52,7 @@ const Hero = () => {
             className="bg-[#0174C7] w-[367px] h-[63px] flex justify-center items-center text-[22px] font-raleway text-white font-bold gap-x-2 mt-[20px] rounded-md"
             onClick={modalControll}
           >
-            Get Your Case Study Now <ChevronsRight />
+            Apply for Your EIN Now <ChevronsRight />
           </button>
         </div>
       </div>
@@ -63,12 +67,12 @@ const Header = () => {
   return (
     <div className="mt-[46px]">
       <p className="text-[20px] text-blue-primary font-semibold text-primary-blue text-center">
-        {" "}
-        Case Study For Coaches & Consultants:
+        EIN Service for Entrepreneurs & Businesses:
       </p>
       <h1 className="text-[42px] font-lato font-medium text-[#2F2F2F] max-w-[900px] mx-auto mt-[35px]">
-        &ldquo;How I Get 30-50 High Ticket Coaching And Consulting Clients Every
-        Single Month With Predictability Down To The Dollar And Day&ldquo;
+        &ldquo;How We Help Entrepreneurs Secure Their Employer Identification
+        Numbers Quickly and Stress-Free, So They Can Focus on Growing Their
+        Business&ldquo;
       </h1>
     </div>
   );
@@ -85,7 +89,7 @@ const ModalUI = () => {
       />
 
       <h1 className="text-black text-[24px] font-semibold text-center mt-4 max-w-[450px] mx-auto">
-        Enter your email to get instant access to the case studys{" "}
+        Enter your email to start your EIN application instantly{" "}
       </h1>
 
       <CaseStudyForm />

@@ -7,26 +7,26 @@ const Page = () => {
       <section className="flex flex-col md:flex-row gap-y-10 items-start justify-start md:px-5 py-[80px] gap-x-[100px]">
         <div className="max-w-[520px] space-y-[30px]">
           <h1 className="text-[32px] text-2F font-bold mb-[50px]">
-            About Sam Ovens
+            About Saidur Consulting
           </h1>
           <p>
-            Sam Ovens is an entrepreneur from Auckland, New Zealand who dropped
-            out of university and started two successful companies by the age of
-            24 working out of his parents garage.
+            Saidur Consulting is dedicated to helping entrepreneurs and
+            businesses across the United States obtain their Employer
+            Identification Number (EIN) with ease and efficiency.
           </p>
           <p>
-            Sam is a digital marketing consultant who helps companies profit
-            wildly through digital marketing. He has personally managed a large
-            digital ad spend on behalf of clients and been able to consistently
-            prove ROI.
+            We understand that starting or growing a business comes with
+            challenges, and navigating the EIN application process shouldn’t be
+            one of them. Our team ensures a smooth and hassle-free experience,
+            so you can focus on your business goals.
           </p>
           <p>
-            Sams clients are some of the fastest growing companies in New
-            Zealand and Australia and he has helped them gain choke holds in
-            their respective markets online.
+            With years of expertise, Saidur Consulting has assisted countless
+            clients in launching their businesses successfully, ensuring they
+            have the compliance tools they need to thrive.
           </p>
           <Button className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]">
-            FREE Case Study
+            Get Started Today
           </Button>
         </div>
         <div>

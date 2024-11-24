@@ -55,7 +55,7 @@ const CaseStudyForm = () => {
           type="submit"
           className="bg-[#0174C7] hover:bg-blue-primary/80 w-full h-[43px] flex justify-center items-center text-[18px] font-raleway text-white font-bold gap-x-2 mt-[20px] rounded-md"
         >
-          Get Your Case Study Now <ChevronsRight />
+          Apply for Your EIN Now <ChevronsRight />
         </button>
       </form>
     </Form>
