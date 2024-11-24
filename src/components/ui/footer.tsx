@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex items-center gap-x-10 pt-5 md:pt-[40px] text-[14px]">
-        <Link href="/" className="hover:underline">
+        <Link href="/privacy" className="hover:underline">
           Privacy Policy
         </Link>
         <Link href="/" className="hover:underline">
