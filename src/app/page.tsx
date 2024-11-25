@@ -5,12 +5,12 @@ export default function Home() {
   return (
     <div className="container">
       <div className="flex flex-col md:flex-row gap-y-10 items-start justify-center py-[80px] gap-x-[100px]">
-        <div>
+        <div className="flex-1">
           <Image
-            width={314}
+            width={514}
             height={416}
             alt="profile"
-            src="https://samovensdemo.com/hosted/images/7b/ee65303cf311e7a03b9505c27d3bf2/sam-ovens.png"
+            src="https://utfs.io/f/Y2NgHE9NGrU2ZASmg4xoedm97BSnsa6bWJC0LpiYtjkIGyUH"
           />
         </div>
         <div className="max-w-[520px] space-y-[30px]">
