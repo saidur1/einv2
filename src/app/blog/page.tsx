@@ -38,6 +38,7 @@ const Page = () => {
             published={published}
             thumbnail={thumbnail}
             written_by={wriiten_by}
+            id={id}
           />
         ))}
       </div>

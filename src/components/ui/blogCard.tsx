@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "./button";
 import { Card, CardContent, CardFooter, CardHeader } from "./card";
 
@@ -7,9 +8,10 @@ interface Props {
   written_by: string;
   published: string;
   thumbnail: string;
+  id: number;
 }
 
-const BlogCard = ({ title, written_by, published, thumbnail }: Props) => {
+const BlogCard = ({ title, written_by, published, thumbnail, id }: Props) => {
   return (
     <Card className="shadow-none">
       <CardHeader>
@@ -26,7 +28,9 @@ const BlogCard = ({ title, written_by, published, thumbnail }: Props) => {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="h-[50px] w-fit">Read Full Article</Button>
+        <Link href={`/blog/${id}`}>
+          <Button className="h-[50px] w-fit">Read Full Article</Button>
+        </Link>
       </CardFooter>
     </Card>
   );
