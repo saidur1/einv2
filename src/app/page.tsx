@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,8 +28,11 @@ export default function Home() {
             If you&apos;re ready to get your EIN without the stress, click the
             button below to get started today.
           </p>
-          <Button className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]">
-            Get Your EIN
+          <Button
+            className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]"
+            asChild
+          >
+            <Link href="/case-study">Get Your EIN</Link>
           </Button>
         </div>
       </div>

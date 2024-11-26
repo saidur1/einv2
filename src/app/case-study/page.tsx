@@ -80,11 +80,11 @@ const Header = () => {
 
 const ModalUI = () => {
   return (
-    <div className="max-w-[500px] mx-auto space-y-10">
+    <div className="max-w-[550px] mx-auto space-y-10">
       <Image
         src="https://samovensdemo.com/hosted/images/98/ce74d03d7311e78c4cebad35bb41fa/leadbox_status_bar_gray3.gif"
         alt="loader"
-        width={600}
+        width={900}
         height={40}
       />
 

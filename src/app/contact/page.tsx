@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -25,8 +26,11 @@ const Page = () => {
             <h3 className="font-semibold">Phone:</h3>
             <p>+880 19 7309 5752</p>
           </div>
-          <Button className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]">
-            Get Your EIN
+          <Button
+            className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]"
+            asChild
+          >
+            <Link href="/case-study">Get Your EIN</Link>
           </Button>
         </div>
         <div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -25,8 +26,11 @@ const Page = () => {
             clients in launching their businesses successfully, ensuring they
             have the compliance tools they need to thrive.
           </p>
-          <Button className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]">
-            Get Started Today
+          <Button
+            className="rounded-[3px] bg-blue-primary hover:bg-blue-primary/80 text-[20px] w-[240px] h-[50px]"
+            asChild
+          >
+            <Link href="/case-study">Get Started Today</Link>
           </Button>
         </div>
         <div>
