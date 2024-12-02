@@ -34,6 +34,7 @@ const CaseStudyForm = () => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+
     push("/video");
   }
   return (

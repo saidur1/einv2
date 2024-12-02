@@ -1,11 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 
 declare global {
   interface Window {
     _wq: {
       id?: string;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onReady?: (video: any) => void;
     }[];
   }
@@ -86,7 +88,7 @@ const WistiaPlayer = ({ videoId }: Props) => {
                 width: "100%",
               }}
             >
-              <img
+              <Image
                 src={`https://fast.wistia.com/embed/medias/${videoId}/swatch`}
                 style={{
                   filter: "blur(5px)",
@@ -94,8 +96,11 @@ const WistiaPlayer = ({ videoId }: Props) => {
                   objectFit: "contain",
                   width: "100%",
                 }}
+                width={1000}
+                height={1000}
                 alt=""
                 aria-hidden="true"
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 onLoad={(e: any) => {
                   e.target.parentNode.style.opacity = 1;
                 }}

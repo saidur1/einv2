@@ -1,6 +1,4 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -10,6 +8,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "utfs.io",
+      },
+      {
+        protocol: "https",
+        hostname: "fast.wistia.com",
       },
     ],
   },

@@ -1,20 +1,21 @@
 import Image from "next/image";
 
-const Page = ({ params }: { params: { part: number } }) => {
+//eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Page = ({ params }: { params: { part: string } }) => {
   const part = params?.part;
   return (
     <div className="container mt-[100px]">
       <Header part={params.part} />
-      {part == 1 && <PartOneBlog />}
-      {part == 2 && <PartTwoBlog />}
-      {part == 3 && <PartThreeBlog />}
+      {part === "1" && <PartOneBlog />}
+      {part === "2" && <PartTwoBlog />}
+      {part === "3" && <PartThreeBlog />}
     </div>
   );
 };
 
 export default Page;
 
-const Header = ({ part }: { part: number }) => {
+const Header = ({ part }: { part: string }) => {
   return (
     <div className="mb-[50px]">
       <h1 className="text-[22px] text-blue-primary font-medium">
@@ -66,6 +67,7 @@ const PartOneBlog = () => {
     </div>
   );
 };
+
 const PartTwoBlog = () => {
   const content = [
     {
@@ -100,6 +102,7 @@ const PartTwoBlog = () => {
     </div>
   );
 };
+
 const PartThreeBlog = () => {
   const content = [
     {

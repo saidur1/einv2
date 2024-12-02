@@ -45,7 +45,7 @@ const Mobile = () => {
           href="/"
           className="uppercase text-[32px]  text-white cursor-pointer hover:underline"
         >
-          Sam ovens
+          Saidur Consulting
         </Link>
 
         <div className="flex items-center gap-x-10 ">
@@ -77,7 +77,7 @@ const Desktop = () => {
           href="/"
           className="uppercase text-[32px] text-white hover:underline"
         >
-          Sam ovens
+          Saidur Consulting
         </Link>
 
         <div className="flex items-center gap-x-10">
