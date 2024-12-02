@@ -38,7 +38,8 @@ const Page = () => {
             width={614}
             height={416}
             alt="profile"
-            src="https://utfs.io/f/Y2NgHE9NGrU2ZASmg4xoedm97BSnsa6bWJC0LpiYtjkIGyUH"
+            src="https://utfs.io/f/Y2NgHE9NGrU25M1D2FD7N2iZGrkvehEnuaFj9QDB318smcC0"
+            className="rounded-md bg-gray-100"
           />
         </div>
       </section>
