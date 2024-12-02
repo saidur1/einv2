@@ -14,6 +14,7 @@ export const collecProspect = async (email: string) => {
       success: true,
     };
   } catch (error) {
+    console.log(error);
     return {
       success: false,
     };
