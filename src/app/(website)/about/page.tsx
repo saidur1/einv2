@@ -35,10 +35,10 @@ const Page = () => {
         </div>
         <div>
           <Image
-            width={314}
+            width={614}
             height={416}
             alt="profile"
-            src="https://samovensdemo.com/hosted/images/79/4b16503d0e11e7983bbd2478244b72/about-sam-ovens-image.png"
+            src="https://utfs.io/f/Y2NgHE9NGrU2ZASmg4xoedm97BSnsa6bWJC0LpiYtjkIGyUH"
           />
         </div>
       </section>

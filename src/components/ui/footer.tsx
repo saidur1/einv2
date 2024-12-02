@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="py-[40px] container">
       <div className="flex flex-col md:flex-row gap-y-5 justify-between text-[14px] text-2f">
-        <p>&copy; 2017 SamOvens.com</p>
+        <p>&copy; 2024 Saidur Consulting</p>
         <div className="flex items-center gap-x-10">
           {navList &&
             navList.map(({ id, href, name }) => (

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import EmailCopy from "./_components/email-copy";
 
 const Page = () => {
   return (
@@ -18,10 +19,7 @@ const Page = () => {
             Our business hours are Monday – Friday, 9:00 AM – 5:00 PM (Dhaka
             Time).
           </p>
-          <div>
-            <h3 className="font-semibold">Email:</h3>
-            <p>support@saidurrahman.org</p>
-          </div>
+          <EmailCopy />
           <div>
             <h3 className="font-semibold">Phone:</h3>
             <p>+880 19 7309 5752</p>
