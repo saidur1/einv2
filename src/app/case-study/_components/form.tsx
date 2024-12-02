@@ -1,5 +1,6 @@
 "use client";
 
+import { collecProspect } from "@/actions/collect-prospect";
 import {
   Form,
   FormControl,
@@ -9,9 +10,11 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChevronsRight } from "lucide-react";
+import { ChevronsRight, Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -19,6 +22,7 @@ const formSchema = z.object({
 });
 
 const CaseStudyForm = () => {
+  const [isLoading, setLoading] = useState<true | false>(false);
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -30,12 +34,19 @@ const CaseStudyForm = () => {
   const { push } = useRouter();
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
+    setLoading(true);
+    const res = await collecProspect(values?.email);
 
-    push("/video");
+    if (res.success) {
+      setLoading(false);
+      push("/video");
+    } else {
+      setLoading(false);
+      toast.error("Failed to submit!");
+    }
   }
   return (
     <Form {...form}>
@@ -58,9 +69,15 @@ const CaseStudyForm = () => {
         />
         <button
           type="submit"
-          className="bg-[#0174C7] hover:bg-blue-primary/80 w-full h-[43px] flex justify-center items-center text-[18px] font-raleway text-white font-bold gap-x-2 mt-[20px] rounded-md"
+          className="bg-[#0174C7] hover:bg-blue-primary/80 w-full h-[43px] flex justify-center items-center text-[18px] font-raleway text-white font-bold gap-x-2 mt-[20px] rounded-md disabled:opacity-60"
+          disabled={isLoading}
         >
-          Apply for Your EIN Now <ChevronsRight />
+          Apply for Your EIN Now{" "}
+          {isLoading ? (
+            <Loader2 className="animate-spin " />
+          ) : (
+            <ChevronsRight />
+          )}
         </button>
       </form>
     </Form>
