@@ -37,7 +37,7 @@ const Hero = () => {
       <div className="max-w-[1130px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 mt-[80px]">
         <div className="w-[388px] h-[219px] relative">
           <Image
-            src="https://utfs.io/f/Y2NgHE9NGrU2ZASmg4xoedm97BSnsa6bWJC0LpiYtjkIGyUH"
+            src="https://utfs.io/f/Y2NgHE9NGrU2wPO9SpDWntEaNgP6SWvJM5dsbQzFjGCY1O97"
             fill
             alt="profile"
           />

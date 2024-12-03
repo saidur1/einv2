@@ -8,7 +8,7 @@ const EmailCopy = () => {
 
   const onCopy = () => {
     setIsCopied(true);
-    navigator.clipboard.writeText("support@saidurrahman.org");
+    navigator.clipboard.writeText("support@ein.saidurrahman.org");
 
     setTimeout(() => {
       setIsCopied(false);
@@ -18,7 +18,7 @@ const EmailCopy = () => {
     <div>
       <h3 className="font-semibold">Email:</h3>
       <p className="">
-        support@saidurrahman.org{" "}
+        support@ein.saidurrahman.org
         <Button size="icon" variant="outline" className="ml-2" onClick={onCopy}>
           {isCopied ? (
             <Check className="h-4 w-4" />
