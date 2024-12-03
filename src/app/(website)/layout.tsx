@@ -1,5 +1,6 @@
 import Footer from "@/components/ui/footer";
 import Navbar from "@/components/ui/navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Toaster } from "sonner";
 import "./globals.css";
@@ -16,13 +17,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Toaster />
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          <Toaster />
+          <Navbar />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

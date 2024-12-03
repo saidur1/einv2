@@ -1,6 +1,5 @@
-import ProspectCard from "@/components/ui/prospect-card";
 import { prismaDB } from "@/lib/db";
-import { Prospect } from "@prisma/client";
+import TableContainer from "./_components/table-container";
 
 const Page = async () => {
   const prospects = await prismaDB.prospect.findMany();
@@ -13,11 +12,7 @@ const Page = async () => {
         </h1>
         <p className="text-primary-black/50">Collected email from prospect</p>
       </div>
-      <div className="my-5 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {prospects?.map((item: Prospect) => (
-          <ProspectCard data={item} key={item?.id} />
-        ))}
-      </div>
+      <TableContainer data={prospects} />
     </div>
   );
 };
