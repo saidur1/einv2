@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PartOneBlog from "./_components/part-one-blog";
 
 //eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Page = ({ params }: { params: { part: string } }) => {
@@ -29,41 +30,6 @@ const Header = ({ part }: { part: string }) => {
           fill
         />
       </div>
-    </div>
-  );
-};
-
-const PartOneBlog = () => {
-  const content = [
-    {
-      id: 1,
-      title: "Introduction to EIN",
-      desc: "An Employer Identification Number (EIN), also known as a Federal Tax Identification Number, is a unique nine-digit number assigned by the IRS to businesses in the United States. It’s like a Social Security number for your business, used primarily for tax purposes. But its significance goes far beyond just taxes.",
-    },
-    {
-      id: 2,
-      title: "Why EIN Matters",
-      desc: "Having an EIN is crucial for many business operations. It enables businesses to file taxes, open business bank accounts, and establish a formal business presence. Additionally, many vendors and suppliers require an EIN to process payments or extend credit, making it indispensable for day-to-day operations.",
-    },
-    {
-      id: 3,
-      title: "Who Needs an EIN?",
-      desc: "While not every business is required to have an EIN, it is mandatory for those that hire employees, operate as corporations or partnerships, or file specific tax returns. Even sole proprietors may benefit from obtaining one, especially if they wish to separate their personal and business finances.",
-    },
-    {
-      id: 4,
-      title: "How EIN Supports Growth",
-      desc: "Obtaining an EIN signals a commitment to formalizing your business. It helps establish credibility with customers and partners while providing a foundation for scaling operations. For many businesses, getting an EIN is one of the first steps toward long-term success.",
-    },
-  ];
-  return (
-    <div className="space-y-5">
-      {content?.map(({ id, desc, title }) => (
-        <div className="space-y-2" key={id}>
-          <h1 className="text-[22px] font-semibold">{title}</h1>
-          <p>{desc}</p>
-        </div>
-      ))}
     </div>
   );
 };

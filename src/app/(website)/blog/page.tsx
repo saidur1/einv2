@@ -30,7 +30,7 @@ const blogs = [
 const Page = () => {
   return (
     <div className="mt-[100px] container">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 gap-10">
         {blogs?.map(({ id, title, published, thumbnail, wriiten_by }) => (
           <BlogCard
             key={id}
