@@ -1,14 +1,19 @@
 "use server";
 
-import { prismaDB } from "@/lib/db";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
 export const collecProspect = async (email: string) => {
   try {
-    await prismaDB.prospect.create({
-      data: {
+    await prisma.prospect.upsert({
+      where: {
+        email: email,
+      },
+      create: {
+        email,
+      },
+      update: {
         email,
       },
     });
