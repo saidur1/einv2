@@ -1,6 +1,9 @@
 "use server";
 
 import { prismaDB } from "@/lib/db";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 
 export const collecProspect = async (email: string) => {
   try {
@@ -12,6 +15,26 @@ export const collecProspect = async (email: string) => {
 
     return {
       success: true,
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      success: false,
+    };
+  }
+};
+
+export const deleteProspect = async (email: string) => {
+  try {
+    const result = await prisma.prospect.delete({
+      where: {
+        email,
+      },
+    });
+
+    return {
+      success: true,
+      data: result,
     };
   } catch (error) {
     console.log(error);

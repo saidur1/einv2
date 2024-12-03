@@ -15,7 +15,7 @@ const Page = async () => {
       </div>
       <div className="my-5 grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
         {prospects?.map((item: Prospect) => (
-          <ProspectCard email={item?.email} key={item?.id} />
+          <ProspectCard data={item} key={item?.id} />
         ))}
       </div>
     </div>
