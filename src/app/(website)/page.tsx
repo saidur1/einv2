@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className="max-w-[520px] space-y-[30px]">
           <h1 className="text-[32px] text-2F font-bold mb-[50px]">
-            We Help Businesses Secure Their EIN Quickly and Hassle-Free
+            We Help Non-U.S. Businesses Obtain EIN From The USA Without LLC
           </h1>
           <p>Starting a business and need an EIN?</p>
           <p>
