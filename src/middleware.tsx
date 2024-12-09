@@ -31,6 +31,8 @@ const handleCustomRedirects = (path: string) => {
     return NextResponse.redirect(
       "https://sheet.zoho.com/sheet/open/9ukx18da62e873c8a404a95d766ac4bc54ce3?sheetid=0&range=G4"
     );
+  } else if (path === "/crm") {
+    return NextResponse.redirect("https://crm.zoho.com/crm/org871893623/");
   }
 
   return null; // No redirect
@@ -72,6 +74,7 @@ export const config = {
     "/j",
     "/f",
     "/l",
+    "/crm",
     "/dashboard",
     "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
     "/(api|trpc)(.*)",
